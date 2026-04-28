@@ -3,14 +3,14 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd hospital-ui && npm ci
+        - npm ci
     build:
       commands:
-        - cd hospital-ui && npm run build
+        - npm run build
   artifacts:
-    baseDirectory: hospital-ui/build
+    baseDirectory: build
     files:
       - '**/*'
   cache:
     paths:
-      - hospital-ui/node_modules/**/*
+      - node_modules/**/*
